@@ -1,0 +1,23 @@
+{
+  "name": "node-red-contrib-node-change-accent-word",
+  "version": "0.0.2",
+  "license": "Apache-2.0",
+  "description": "A Node-RED node that change accent word to another word without accent",
+  "dependencies": {
+    "changewordswithaccents": "^0.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aco7342/changewordswithaccents"
+  },
+  "node-red": {
+    "nodes": {
+      "chg-word-accent": "chg-word-accent.js"
+    }
+  },
+  "author": {
+    "name": "Antonio Carlos Oliveira",
+    "email": "acoliveira@terra.com.br",
+    "url": "https://github.com/aco7342/node-red-contrib-change-accent-word"
+  }
+}

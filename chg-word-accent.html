@@ -1,22 +1,30 @@
-node-red-contrib-change-accent-word
-===================================
+<script type="text/javascript">
+    RED.nodes.registerType('chg-word-accent',{
+        category: 'function',
+        color: '#E6E0F8',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "function.png",
+        label: function() {
+            return this.name||"chg-word-accent";
+        }
+    });
+</script>
 
-A <a href="http://nodered.org" target="_new">Node-RED</a> 
-node that convert accent words inside msg.payload to another word without accent
+<script type="text/x-red" data-template-name="chg-word-accent">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
 
-Install
--------
-
-Run the following command in your Node-RED user directory - typically `~/.node-red`
-
-    npm install node-red-contrib-change-accent-word
+<script type="text/x-red" data-help-name="chg-word-accent">
+<p>A Convert accent words inside <code>msg.payload</code> to without accent words</p>
+<pre>
     
-    * dependency https://github.com/aco7342/changewordswithaccents
-
-
-Usage
------
-<pre><code>
 if Input msg.payload is
  "Contrata\u001a\u001ao de im\u001aveis para " + 
  "instala\u001a\u001ao da Ag\u001ancia do IBGE " + 
@@ -47,11 +55,5 @@ Special Remarks: msg.action is ...
        
   To use with this 
   "http://compras.dados.gov.br/contratos/v1/contratos.json?offset=0"
-  
-  see https://github.com/aco7342/changewordswithaccents file: lib/lang.json
-  
-  Hackathon - Fiesp2017 / ADPF
-  Fiscal Cidadao - Projeto de Combate a Corrupçao
-  BlueMix/NodeRed & Watson Discovery e outros
-  
-</code></pre>
+</pre></b>
+</script>
